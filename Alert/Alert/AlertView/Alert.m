@@ -283,14 +283,14 @@ CGRect getScreenBounds() {
     _titleLabel = [[UILabel alloc] init];
     [_alertView addSubview:_titleLabel];
     _titleLabel.numberOfLines = 3;
-    _titleLabel.textAlignment = NSTextAlignmentCenter;
+    _titleLabel.textAlignment = NSTextAlignmentLeft;
     _titleLabel.lineBreakMode = NSLineBreakByTruncatingTail;
     _titleLabel.numberOfLines = 3;
-    _titleLabel.text = [NSString stringWithFormat:@"      %@", titleText];
-    _titleLabel.font = [UIFont systemFontOfSize:17];
-    _titleLabel.textColor = [UIColor colorWithRed:(255.0/255) green:(127.0/255) blue:(70.0/255) alpha:1];
+    _titleLabel.text = [NSString stringWithFormat:@"%@", titleText];
+    _titleLabel.font = [UIFont boldSystemFontOfSize:18];
+    _titleLabel.textColor = [UIColor colorWithRed:(0.0/255) green:(103.0/255) blue:(172.0/255) alpha:1];
     CGRect rect = [_titleLabel textRectForBounds:CGRectMake(0, 20, _alertView.frame.size.width-40, 100) limitedToNumberOfLines:3];
-    rect.origin.x = 20;
+    rect.origin.x = 0;
     _titleLabel.frame = rect;
     _titleLabel.center = CGPointMake(CGRectGetWidth(_alertView.frame)/2, CGRectGetHeight(_titleLabel.frame)/2+15);
     
@@ -411,9 +411,9 @@ CGRect getScreenBounds() {
             button.layer.borderColor = [UIColor colorWithWhite:0 alpha:0.1].CGColor;
             button.layer.borderWidth = 0.5;
             button.tag = j;
-            button.titleLabel.font = [UIFont systemFontOfSize:15];
-            [button setTitleColor:[UIColor colorWithRed:(57.0/255) green:(170.0/255) blue:(196.0/255) alpha:1] forState:UIControlStateNormal];
-            [button setTitleColor:[UIColor colorWithRed:(132.0/255) green:(132.0/255) blue:(132.0/255) alpha:1] forState:UIControlStateHighlighted];
+            button.titleLabel.font = [UIFont boldSystemFontOfSize:18];
+            [button setTitleColor:[UIColor colorWithRed:(0.0/255) green:(103.0/255) blue:(172.0/255) alpha:1] forState:UIControlStateNormal];
+            [button setTitleColor:[UIColor colorWithRed:(0.0/255) green:(103.0/255) blue:(172.0/255) alpha:1] forState:UIControlStateHighlighted];
             
             [button setTitle:s forState:UIControlStateNormal];
             [_alertView addSubview:button];
@@ -437,9 +437,9 @@ CGRect getScreenBounds() {
             button.layer.borderColor = [UIColor colorWithWhite:0 alpha:0.1].CGColor;
             button.layer.borderWidth = 0.5;
             button.tag = j;
-            button.titleLabel.font = [UIFont systemFontOfSize:15];
-            [button setTitleColor:[UIColor colorWithRed:(57.0/255) green:(170.0/255) blue:(196.0/255) alpha:1] forState:UIControlStateNormal];
-            [button setTitleColor:[UIColor colorWithRed:(132.0/255) green:(132.0/255) blue:(132.0/255) alpha:1] forState:UIControlStateHighlighted];
+            button.titleLabel.font = [UIFont boldSystemFontOfSize:18];
+            [button setTitleColor:[UIColor colorWithRed:(0.0/255) green:(103.0/255) blue:(172.0/255) alpha:1] forState:UIControlStateNormal];
+            [button setTitleColor:[UIColor colorWithRed:(0.0/255) green:(103.0/255) blue:(172.0/255) alpha:1] forState:UIControlStateHighlighted];
             
             [button setTitle:s forState:UIControlStateNormal];
             [_alertView addSubview:button];
